@@ -3,13 +3,13 @@
 An IoT-based smart farming system for cannabis cultivation, running on Linux and Raspberry Pi. Includes a web dashboard with AI-powered plant health analysis via video.
 
 ## Project Structure
-├── clip/ # Sample video clips for ML testing
+      ├── clip/ # Sample video clips for ML testing
 
-└── code/
+      └── code/
 
-      ├── pi/ # Code for Raspberry Pi (pumps + sensors)
+            ├── pi/ # Code for Raspberry Pi (pumps + sensors)
       
-      └── web/ # Web dashboard running on Ubuntu
+            └── web/ # Web dashboard running on Ubuntu
 
 
 ## Key Features
