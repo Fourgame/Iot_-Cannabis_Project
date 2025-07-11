@@ -4,8 +4,11 @@ An IoT-based smart farming system for cannabis cultivation, running on Linux and
 
 ## Project Structure
 ├── clip/ # Sample video clips for ML testing
+
 └── code/
+
       ├── pi/ # Code for Raspberry Pi (pumps + sensors)
+      
       └── web/ # Web dashboard running on Ubuntu
 
 
