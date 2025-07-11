@@ -1,0 +1,19 @@
+{
+  "name": "iot_fire",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chartjs-plugin-zoom": "^2.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.1",
+    "mqtt": "^5.10.4",
+    "socket.io": "^4.8.1"
+  }
+}

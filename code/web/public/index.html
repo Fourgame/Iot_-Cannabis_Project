@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IoT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Internet of Things Dashboard</h1>
+  <div class="container">
+    <!-- 1) ส่วนซ้าย: กล้อง + รูปต้นไม้ + สถานะ -->
+    <div class="left">
+      <img id="video" src="http://10.64.194.92:8081/video_feed" alt="Camera Feed">
+      <img id="tree" src="/picture/good.png" alt="Tree">
+      <div id="status">Good</div>
+      <div id="time">Time: -</div>
+    </div>
+
+    <!-- 2) ส่วนขวา: Gauges -->
+    <div class="right">
+      <div class="gauges">
+        <canvas id="gauge-n"></canvas>
+        <canvas id="gauge-p"></canvas>
+        <canvas id="gauge-k"></canvas>
+        <canvas id="gauge-ph"></canvas>
+        <canvas id="gauge-ec"></canvas>
+      </div>
+      <!-- 3) ปุ่มเปิด/ปิด Light และ Water -->
+      <div class="controls">
+        <button id="lightBtn" class="control-btn off" onclick="toggleControl('light')">💡 แสงไฟ: ปิด</button>
+        <button id="waterBtn" class="control-btn off" onclick="toggleControl('water')">💧 น้ำ: ปิด</button>
+        <button id="puiBtn" class="control-btn off" onclick="toggleControl('pui')">🌱 ปุ๋ย: ปิด</button>
+        <button id="yaBtn" class="control-btn off" onclick="toggleControl('ya')">💊 ยา: ปิด</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal สำหรับ History Chart -->
+  <div id="chartModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="historyTitle"></h2>
+      <canvas id="popupChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
